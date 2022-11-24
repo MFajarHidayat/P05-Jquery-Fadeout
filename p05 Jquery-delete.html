@@ -1,0 +1,114 @@
+# Query: \n<!DOCTYPE html>\n<head>\n	<link rel="stylesheet" type="text/css" href="index.css">\n    <title>Nama Teman di IKMI</title>\n    <style>\n        table {\n            border-collapse: collapse;\n        }\n        table, th, td {\n            border: 1px solid black;\n        }\n        th, td {\n            padding: 20px;\n        }\n        th {\n            background-color: cyan;\n            color: red;\n        }\n		form{\n			width: 500px;\n			margin: 20px auto;\n		}\n		label,input \n		{\n        display: block;\n        margin: 5px 0;\n        font-si: 15px;\n		}\n		button {\n        display: block;\n		}\n    </style>\n<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\n</head>\n<body>\n    <table class="tabelku">\n        <tr>\n            <th rowspan="2">Teman Ikmi</th>\n        </tr>\n        <tr>\n            <th>Angkatan</th>\n            <th>Alamat</th>\n            <th>Prodi</th>\n			<th>Aksi</th>\n        </tr>\n        <tr class="row" id="row__1">\n            <td class="cell" id="nama__1">Arya Nuryana</td>\n            <td class="cell" id="angkatan__1">2021</td>\n            <td class="cell" id="alamat__1">Cirebon</td>\n            <td class="cell" id="prodi__1">Informatika</td>\n			<td class="cell" id="hapus__1">Hapus</td>\n        </tr>\n        <tr class="row" id="row__2">\n            <td class="cell" id="nama__2">Ikbal</td>\n            <td class="cell" id="angkatan__2">2020</td>\n            <td class="cell" id="alamat__2">Cirebon</td>\n            <td class="cell" id="prodi__2">Informatika</td>\n			<td class="cell" id="hapus__2">Hapus</td>\n        </tr>\n        <tr class="row"  id="row__3" >\n            <td class="cell" id="nama__3">Krisna</td>\n            <td class="cell" id="angkatan__3">2020</td>\n            <td class="cell" id="alamat__3">Cirebon</td>\n            <td class="cell" id="prodi__3">Informatika</td>\n			<td class="cell" id="hapus__3">Hapus</td>\n        </tr>\n		<tr class="row" id="row__4">\n            <td class="cell" id="nama__4">Fajar</td>\n            <td class="cell" id="angkatan__4">2021</td>\n            <td class="cell" id="alamat__4">Cirebon</td>\n            <td class="cell" id="prodi__4">Informatika</td>\n			<td class="cell" id="hapus__4">Hapus</td>\n		</tr>\n		<tr class="row" id="row__5">\n            <td class="cell" id="nama__5">Elsa</td>\n            <td class="cell" id="angkatan__5">2021</td>\n            <td class="cell" id="alamat__5">Cirebon</td>\n            <td class="cell" id="prodi__5">Informatika</td>\n			<td class="cell" id="hapus__5">Hapus</td>\n		</tr>\n	 \n   </table>\n	<script>\n		$(document).ready(function(){\n			//alert(0)\n			$('.cell').click(function(){\n				//alert(1)\n				let isi = $(this).text();\n				let tid = $(this).prop('id');\n				let rid = tid.split('__');\n				let id_row = rid[1];\n				let nama_mahasiswa = $('#nama__'+id_row).text();\n				\n				if(isi=='Hapus'){\n					let yakin = confirm(`Yakin hapus ${nama_mahasiswa} dari list ??`);\n					if(!yakin) return;\n					\n					$('#row__'+id_row).fadeOut();\n				\n				}\n				else{\n					alert('Belum ada aksi.Terimakasih.')\n				}\n			})\n		})\n	\n	</script>\n</body>\n</html>
+# ContextLines: 1
+
+No Results
+
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+    <title>Nama Teman di IKMI</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 20px;
+        }
+        th {
+            background-color: cyan;
+            color: red;
+        }
+		form{
+			width: 500px;
+			margin: 20px auto;
+		}
+		label,input 
+		{
+        display: block;
+        margin: 5px 0;
+        font-si: 15px;
+		}
+		button {
+        display: block;
+		}
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <table class="tabelku">
+        <tr>
+            <th rowspan="2">Teman Ikmi</th>
+        </tr>
+        <tr>
+            <th>Angkatan</th>
+            <th>Alamat</th>
+            <th>Prodi</th>
+			<th>Aksi</th>
+        </tr>
+        <tr class="row" id="row__1">
+            <td class="cell" id="nama__1">Aldhof</td>
+            <td class="cell" id="angkatan__1">2021</td>
+            <td class="cell" id="alamat__1">Cirebon</td>
+            <td class="cell" id="prodi__1">Informatika</td>
+			<td class="cell" id="hapus__1">Hapus</td>
+        </tr>
+        <tr class="row" id="row__2">
+            <td class="cell" id="nama__2">Hamam</td>
+            <td class="cell" id="angkatan__2">2020</td>
+            <td class="cell" id="alamat__2">Cirebon</td>
+            <td class="cell" id="prodi__2">Informatika</td>
+			<td class="cell" id="hapus__2">Hapus</td>
+        </tr>
+        <tr class="row"  id="row__3" >
+            <td class="cell" id="nama__3">Joko</td>
+            <td class="cell" id="angkatan__3">2020</td>
+            <td class="cell" id="alamat__3">Cirebon</td>
+            <td class="cell" id="prodi__3">Informatika</td>
+			<td class="cell" id="hapus__3">Hapus</td>
+        </tr>
+		<tr class="row" id="row__4">
+            <td class="cell" id="nama__4">Widad</td>
+            <td class="cell" id="angkatan__4">2021</td>
+            <td class="cell" id="alamat__4">Cirebon</td>
+            <td class="cell" id="prodi__4">Informatika</td>
+			<td class="cell" id="hapus__4">Hapus</td>
+		</tr>
+		<tr class="row" id="row__5">
+            <td class="cell" id="nama__5">Yusuf</td>
+            <td class="cell" id="angkatan__5">2021</td>
+            <td class="cell" id="alamat__5">Cirebon</td>
+            <td class="cell" id="prodi__5">Informatika</td>
+			<td class="cell" id="hapus__5">Hapus</td>
+		</tr>
+	 
+   </table>
+	<script>
+		$(document).ready(function(){
+			//alert(0)
+			$('.cell').click(function(){
+				//alert(1)
+				let isi = $(this).text();
+				let tid = $(this).prop('id');
+				let rid = tid.split('__');
+				let id_row = rid[1];
+				let nama_mahasiswa = $('#nama__'+id_row).text();
+				
+				if(isi=='Hapus'){
+					let yakin = confirm(`Yakin hapus ${nama_mahasiswa} dari list ??`);
+					if(!yakin) return;
+					
+					$('#row__'+id_row).fadeOut();
+				
+				}
+				else{
+					alert('Belum ada aksi.Terimakasih.')
+				}
+			})
+		})
+	
+	</script>
+</body>
+</html>
